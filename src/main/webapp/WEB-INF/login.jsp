@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sécurite v1</a>
+      <a class="navbar-brand" href="/securite_v1_war_exploded">Sécurite v1</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -52,11 +52,11 @@
 
     <form method="post" action="login" class="form">
       <label for="mail" class="form-label">Mail :</label>
-      <input type="text" name="mail" id="mail" class="form-control" value="${loginCookie}" required>
+      <input type="text" name="mail" id="mail" class="form-control" value="${loginCookie}" required ${disabled}>
       <label for="password" class="form-label">Password :</label>
-      <input type="password" name="password" id="password" class="form-control" required>
+      <input type="password" name="password" id="password" class="form-control" required ${disabled}>
 
-      <button type="submit" class="btn btn-success">Login</button>
+      <button type="submit" class="btn btn-success" ${disabled}>Login</button>
     </form>
   </div>
 

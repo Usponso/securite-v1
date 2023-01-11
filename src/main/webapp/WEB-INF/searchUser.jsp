@@ -14,7 +14,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sécurite v1</a>
+      <a class="navbar-brand" href="/securite_v1_war_exploded">Sécurite v1</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,12 +51,9 @@
     </form>
   </div>
 
-  <div class="container">
-<%--    ${user != null ? user.name : 'null'}--%>
-    <div class="row">
-      <p>${user.name} ${user.firstname} : ${user.age} ans</p> ${nom}
-    </div>
-  </div>
+  ${!empty user
+  ? '<div class="container"><div class="row"><p>'.concat(user.name).concat(" ").concat(user.firstname).concat(" : ").concat(user.age).concat(" ans</p></div>")
+  : ''}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
